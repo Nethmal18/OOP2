@@ -1,0 +1,327 @@
+@charset "ISO-8859-1";
+
+
+a{
+	text-decoration: none;
+	color : white;
+}
+
+.mainDiv 
+{
+	
+	float : left;
+	height : 100%;
+	width : 100%;
+	margin-bottom : 80px;
+}
+
+.rightDiv 
+{
+	margin-left : 50px;
+	display : inline-block;
+	width : 46%;
+	margin-top: 120px;
+}
+
+
+/* buttons */
+
+.btn-lg {
+  background-color: black;
+  border-color: black;
+  color: white;
+  width: 63px;
+  height: 50px;
+  border-radius: 12px;
+  transition: 0.4s;
+  margin: 0px !important;
+}
+
+.btn {
+  background-color: white;
+  border-color: white;
+  margin: 10px;
+  transition-duration: 0.3s;
+  display: block;
+}
+
+.btn:hover
+{
+	background-color: white;
+	border-color: black;
+	
+	transition-duration: 0.3s;
+}
+
+.btn-lg:hover
+{
+	color : black;
+	background-color: black;
+	border-color :black;
+	zoom: 0.3%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	transition-duration: 0.4s;
+}
+
+
+
+/*for the navbar */
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: white !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+ 
+}
+/* for the navBar */
+
+
+.nav-item 
+{
+	margin-right : 50px;
+}
+
+.nav-item a:hover{
+	
+	color : royalblue;
+}
+
+.navbar-brand {
+
+  font-size: var(--bs-navbar-brand-font-size);
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+  top: -23px;
+  left: -8px;
+  position:absolute;
+  height : 50px;
+  margin-top : 0px;
+}
+
+.navbar 
+{
+	height : 80px !important;
+}
+
+
+.logOutDiv
+{
+	display : inline-block;
+	margin-right: 43px;
+	transition-duration: 0.5s;
+	
+}
+
+
+.logOutDiv:hover 
+{
+	scale : 110%;
+	transition-duration: 0.5s;
+}
+
+
+.pfpDiv 
+{
+	display : inline-block;
+	margin-right: 60px;
+}
+
+
+.logOutIcon 
+{
+	width: 70px;
+ 	 height: 70px;
+}
+
+.profile-pic {
+	
+        width: 50px;
+        height: 50px;
+        margin-right : 23px;
+}
+
+.profile-pic img {
+            width: 100%;
+            height: 100%;
+ }
+
+
+/*End of navbar */
+
+/*Off canvas menu */
+
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.offcanvas 
+{
+	margin-top : 0px;
+	width : 50%;
+}
+
+.offcanvas-header .btn-close {
+  padding: calc(var(--bs-offcanvas-padding-y) * .5) calc(var(--bs-offcanvas-padding-x) * .5);
+  margin-left: 130px;
+  margin-top: 12px;
+}
+
+.offcanvas-body a{
+	
+	color: black;
+  margin-top: 100px;
+  padding: 10px;
+  line-height: 60px;
+  font-size: 25px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+
+.offcanvas-body a:hover{
+	
+  color: rgb(0, 128, 255);
+  background-color: aliceblue;
+  margin-top: 100px;
+  padding: 10px;
+  line-height: 60px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* End of off canvas */
+
+h5 {
+	
+  font-size: 30px;
+}
+
+h1
+{
+	font-size : 65px;
+	font-weight: bold;
+	color : #18b19c;
+	margin-left : 180px;
+	margin-bottom : 40px;
+}
+
+
+/*class for the input areas*/
+.mb-3 {
+  margin-bottom: 1rem !important;
+  margin: 30px 31px 0px 20px;
+  width: 92%;
+}
+ 
+.form-label 
+{
+	font-size : 20px;
+}
+
+.formDiv {
+ 	width: 75%;
+    float: left;
+    margin-left: 180px;
+    margin-bottom:  50px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    border : 1px solid #ccc;
+}
+
+.formDiv button 
+{
+  background-color: black;
+  width: 21%;
+  border-radius: 12px;
+  margin-top: 42px !important; 
+  margin-bottom: 66px !important;
+}
+
+.formDiv button:hover{
+	
+	background-color: white;
+}
+
+
+p {
+  padding: 10px;
+  font-size: 18px;
+}
+
+img 
+{
+	position:static;
+	margin-top : 0px;
+}
+
+.center 
+{
+	max-width: fit-content;
+	margin-left : auto;
+	margin-right : auto;
+	
+}
+
+.btnIcon 
+{
+	margin-top : 11px;
+	position : static;
+}
+
+.warningDiv 
+{
+	width : 93%; 
+	background-color: rgba(255, 193, 7, 0.1); 
+	border-color: #ffe082  ;
+	color : #795548 ;
+	border-radius : 12px;
+}
+
+.deleteDiv 
+{
+	margin-top : 30px;
+	width : 93%;
+	background-color: rgba(255, 0, 0, 0.1);
+	border-radius : 12px;
+	color : #721c24;
+	
+}
+
+.deleteDiv h5
+{
+	font-size : 30px;
+	color : #b00020;
+}
+
+.deleteDiv li 
+{
+	font-size : 18px;
+}
+
+.deleteDiv p 
+{
+	font-size : 18px;
+	margin-bottom : 0px;
+}
+
+.deleteDiv input 
+{
+	margin-left : 20px;
+}
+
+.deleteDiv button 
+{
+	background-color : #dc3545;
+	border-color : #dc3545;
+}
+
+.deleteDiv .btnlg:hover
+{
+	background-color : #dc3545;
+	border-color : #dc3545;
+  	box-shadow: 0px 0px 6px #dc3545;
+}
+

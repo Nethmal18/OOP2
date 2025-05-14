@@ -1,0 +1,112 @@
+@charset "ISO-8859-1";
+
+
+body, html{
+	
+	height : 100%;
+	width : 100%;
+	background-color: white;
+	color : black;
+	
+
+}
+
+.btn 
+{
+	background-color: white;
+	border-color: white;
+	margin : 10px;
+	transition-duration: 0.3s;
+	
+}
+.btn:hover
+{
+	background-color: white;
+	border-color: black;
+	
+	transition-duration: 0.3s;
+	
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: white !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+ 
+}
+
+.nav-item 
+{
+	margin-right : 50px;
+}
+
+.nav-item a:hover{
+	
+	color : royalblue;
+}
+
+.navbar-brand {
+
+  font-size: var(--bs-navbar-brand-font-size);
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+  top: -23px;
+  left: -8px;
+  position:absolute;
+  height : 50px;
+  margin-top : 0px;
+}
+
+
+h5 {
+  font-size: 50px;
+}
+
+
+
+
+.btn-lg {
+  background-color: black;
+  border-color: black;
+  color: white;
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 50px 0px 100px -1px;
+  transition: 0.4s;
+
+}
+
+.btn-lg:hover
+{
+	color : black;
+	background-color: white;
+	border-color : white;
+	zoom: 0.3%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	transition-duration: 0.4s;
+}
+
+
+.mainDiv
+{
+	padding-top : 40px;
+	display: grid;
+    place-items: center;
+}
+
+button
+{
+	margin-top : 30px;
+	margin-bottom : 60px;
+	
+}
+
+a
+{
+	text-decoration: none;
+	color : white;
+}
+
+

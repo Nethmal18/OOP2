@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
                     jspPage = "/studentDashboard.jsp";
                     System.out.println("User is a Student, forwarding to: " + jspPage);
                 } else if ("TC".equals(startChar)) {
-                    jspPage = "/Teacher.jsp";
+                    jspPage = "/teacherDashboard.jsp";
                     System.out.println("User is a Teacher, forwarding to: " + jspPage);
                 } else if ("AD".equals(startChar)) {
                 	

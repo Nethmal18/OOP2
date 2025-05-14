@@ -90,7 +90,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.jsp">
+    <a class="navbar-brand" href="CountServlet">
       <img src="images/logo.png" alt="LOGO" width="100" height="90">
     </a>
 
