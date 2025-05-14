@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed; /* Changed from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensures it covers the full viewport */
+  background-image: url('../images/school.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  z-index: -1;
+}
+
+
+.add-new-box {
+  width: 100px;
+  height: 100px;
+  border: 2px dotted #3b5bdb;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3b5bdb;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s;
+}
+
+.add-new-box:hover {
+  background-color: rgba(235, 240, 255, 0.9);
+}
+
+.add-new-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.add-new-text {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.add-new-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px auto 5px 40px; /* left margin controls horizontal spacing */
+  margin-bottom: 0.5px; /* space between box and table */
+}
+

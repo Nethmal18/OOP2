@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #dfefff, #e9fdf2);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.brand img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.brand h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.brand p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #21b573;
+    outline: none;
+    background-color: white;
+}
+
+.actions {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.actions a {
+    font-size: 13px;
+    color: #21b573;
+    text-decoration: none;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #21b573;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #189f5f;
+}
+
+.signup {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup a {
+    color: #21b573;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}

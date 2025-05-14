@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.custom-button {
+  background-color: #3B82F6;   
+  color: white;               
+  font-weight: bold;           
+  padding: 0.5rem 1rem;        
+  border-radius: 9998px;     
+  transition: background-color 0.2s ease; 
+}
+
+.custom-button:hover {
+  background-color: #1D4ED8;   
+}
+
+#ID{
+	background-color: red;
+}
