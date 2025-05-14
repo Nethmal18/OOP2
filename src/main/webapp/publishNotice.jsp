@@ -138,7 +138,7 @@
 					
 					<div class="mb-3">
 					  <label for="type" class="form-label">Notice Type</label>
-					  <select class="form-control" placeholder = "Type" name = "type" required>
+					  <select class="form-control" name = "type" required>
 						  <option  value = General>General</option>
 						  <option value = "Urgent">Urgent</option>
 					  </select>

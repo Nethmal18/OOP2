@@ -114,7 +114,7 @@
 				<!--  this StudentNoticeServlet is temporary. it should be removed once the login part is done -->
 				
 				<a href = "viewStdInfo.jsp">
-					<div class="card" style = "background-image: linear-gradient(45deg, rgb(77, 76, 172), rgb(90, 89, 171)" >
+					<div class="card" style = "background-image: linear-gradient(45deg, rgb(77, 76, 172), rgb(90, 89, 171);" >
 					  <div class="card-body">
 					    <h5 class="card-title">Student Information</h5>
 					    <img class = "btnIcon" src = "images\graduated.png" alt = "graduate Image" width = "50px" height = "50px">
