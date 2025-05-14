@@ -464,14 +464,14 @@
 		
 		    
 		        
-		     <div style = "margin-right : 20px;"onclick = "location.href='Login.jsp'" class = "logOutDiv">
+		     <div style = "margin-right : 20px;"onclick = "location.href='Signup.jsp'" class = "logOutDiv">
 		
 					<img class ="logOutIcon" src = "images/signUp.gif">
 		      
 		      </div>
 		      
 		         
-		      <div  onclick = "location.href='home.jsp'"  class = "logOutDiv">
+		      <div  onclick = "location.href='Login.jsp'"  class = "logOutDiv">
 		
 					<img class ="logOutIcon" src = "images/logIn.gif">
 		      

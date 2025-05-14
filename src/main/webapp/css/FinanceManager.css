@@ -1,0 +1,90 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.logout-btn:hover {
+  background-color: #e60000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  height: 100%;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+.left-image img {
+  width: 800px;
+  height:auto;
+  margin-bottom : 100px;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  width: 800px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  height:75%;
+}
+
+.dashboard-title {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 100px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom:30px;
+}
+
+.box {
+  width: 200px;
+  height: 160px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+
+
+

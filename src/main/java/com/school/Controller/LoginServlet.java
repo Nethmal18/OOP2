@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.school.model.Staffs;
 import com.shcool.DBUtil.LoginDBUtil;
 
-@WebServlet("/loginServlet")
+@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -23,7 +23,6 @@ public class LoginServlet extends HttpServlet {
 
         String stfId = request.getParameter("uid");
         String stfPassword = request.getParameter("pass");
-        System.out.println("Huta");
         System.out.println("Login attempt with ID: " + stfId);
         
         try {
@@ -66,7 +65,7 @@ public class LoginServlet extends HttpServlet {
                     return;
                     
                 } else if ("CM".equals(startChar)) {
-                    jspPage = "/ContentManager.jsp";
+                    jspPage = "/curriculum-dashboard.jsp";
                     System.out.println("User is a Content Manager, forwarding to: " + jspPage);
                 } else if ("FM".equals(startChar)) {
                     jspPage = "/FinanceManager.jsp";
