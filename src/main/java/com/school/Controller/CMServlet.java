@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.school.model.CM;
 import com.shcool.DBUtil.cmDBUtil;
 
-
-
 @WebServlet("/CMServlet")
 public class CMServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

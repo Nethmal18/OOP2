@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Update Student</title>
+  <title>Update Teacher</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body, html {
@@ -53,19 +53,20 @@
 </head>
 <body>
 	<%
-		String tid =request.getParameter("tid");
-		String fname =request.getParameter("fname");
-		String lname =request.getParameter("lname");
-		String email =request.getParameter("email");
-		String phone =request.getParameter("phone");
-		String address =request.getParameter("address");
-		String nic =request.getParameter("nic");
-		String sal =request.getParameter("salary");
-		String hd =request.getParameter("hd");
-		String ex =request.getParameter("ex");
-		String sp =request.getParameter("sp");
-		String dsig =request.getParameter("dsig");
-		String pass =request.getParameter("pass");
+		String tid = request.getParameter("id");
+		String fname = request.getParameter("fname");
+		String lname = request.getParameter("lname");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String address = request.getParameter("address");
+		String nic = request.getParameter("nic");
+		String dob = request.getParameter("dob") != null ? request.getParameter("dob") : "";
+		String sal = request.getParameter("salary");
+		String hd = request.getParameter("hd");
+		String ex = request.getParameter("ex");
+		String sp = request.getParameter("sp");
+		String dsig = request.getParameter("dsig");
+		String pass = request.getParameter("pass");
 	%>
   <div class="bg-image"></div>
   <div class="bg-overlay"></div>
@@ -74,73 +75,77 @@
     <h2 class="text-center mb-4">Update Teacher Details</h2>
     <form action="TeacherInsertServlet" method="post">
       <div class="mb-3">
-        <label for="tid" class="form-label">Teacher ID</label>
+        <label for="stf_id" class="form-label">Teacher ID</label>
         <input type="text" class="form-control" id="stf_id" name="stf_id" value="<%=tid%>" readonly>
       </div>
 
       <div class="row">
         <div class="col-md-6 mb-3">
-          <label for="fname" class="form-label">First Name</label>
-          <input type="text" class="form-control" id="stf_fname" name="stf_fname"  value="<%=fname%>">
+          <label for="stf_fname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="stf_fname" name="stf_fname" value="<%=fname%>">
         </div>
         <div class="col-md-6 mb-3">
-          <label for="lname" class="form-label">Last Name</label>
+          <label for="stf_lname" class="form-label">Last Name</label>
           <input type="text" class="form-control" id="stf_lname" name="stf_lname" value="<%=lname%>">
         </div>
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
+        <label for="stf_email" class="form-label">Email</label>
         <input type="email" class="form-control" id="stf_email" name="stf_email" value="<%=email%>">
       </div>
 
       <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
+        <label for="stf_phone" class="form-label">Phone Number</label>
         <input type="text" class="form-control" id="stf_phone" name="stf_phone" value="<%=phone%>">
       </div>
 
       <div class="mb-3">
-        <label for="address" class="form-label">Address</label>
-        <textarea class="form-control" id="stf_address" name="stf_address" rows="2" placeholder="<%=address%>" required></textarea>
+        <label for="stf_address" class="form-label">Address</label>
+        <textarea class="form-control" id="stf_address" name="stf_address" rows="2"><%=address%></textarea>
       </div>
 
       <div class="mb-3">
-        <label for="nic" class="form-label">NIC</label>
+        <label for="stf_nic" class="form-label">NIC</label>
         <input type="text" class="form-control" id="stf_nic" name="stf_nic" value="<%=nic%>">
+      </div>
+      
+      <div class="mb-3">
+        <label for="stf_dob" class="form-label">Date of Birth</label>
+        <input type="text" class="form-control" id="stf_dob" name="stf_dob" value="<%=dob%>">
       </div>
 	  
 	  <div class="mb-3">
-        <label for="salary" class="form-label">Salary</label>
+        <label for="stf_salary" class="form-label">Salary</label>
         <input type="text" class="form-control" id="stf_salary" name="stf_salary" value="<%=sal%>">
       </div>
       
       <div class="mb-3">
-        <label for="hd" class="form-label">hireDate</label>
+        <label for="stf_hireDate" class="form-label">Hire Date</label>
         <input type="text" class="form-control" id="stf_hireDate" name="stf_hireDate" value="<%=hd%>">
       </div>
       
       <div class="mb-3">
-        <label for="experience" class="form-label">experience</label>
+        <label for="tc_experience" class="form-label">Experience</label>
         <input type="text" class="form-control" id="tc_experience" name="tc_experience" value="<%=ex%>">
       </div>
       
       <div class="mb-3">
-        <label for="specialization" class="form-label">specialization</label>
+        <label for="tc_specialization" class="form-label">Specialization</label>
         <input type="text" class="form-control" id="tc_specialization" name="tc_specialization" value="<%=sp%>">
       </div>
       
-       <div class="mb-3">
-        <label for="designation" class="form-label">designation</label>
+      <div class="mb-3">
+        <label for="tc_designation" class="form-label">Designation</label>
         <input type="text" class="form-control" id="tc_designation" name="tc_designation" value="<%=dsig%>">
       </div>
 	  
-	  
       <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
+        <label for="stf_password" class="form-label">Password</label>
         <input type="password" class="form-control" id="stf_password" name="stf_password" value="<%=pass%>">
       </div>
 
-      <button type="submit" name="action" value="update"  class="btn btn-primary w-100">Update Teacher</button>
+      <button type="submit" name="action" value="update" class="btn btn-primary w-100">Update Teacher</button>
     </form>
   </div>
 </body>

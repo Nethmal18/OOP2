@@ -21,7 +21,7 @@ public class DeleteCMServlet extends HttpServlet {
 		String action = request.getParameter("action");
 		
 		if("delete".equals(action)) {
-			String cid = request.getParameter("cid");
+			String cid = request.getParameter("id");
 			
 			boolean success = cmDBUtil.deletCM(cid);
 			

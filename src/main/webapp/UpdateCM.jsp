@@ -76,19 +76,19 @@
 </head>
 <body>
 <%
-		String cid =request.getParameter("cid");
-		String fname =request.getParameter("fname");
-		String lname =request.getParameter("lname");
-		String email =request.getParameter("email");
-		String phone =request.getParameter("phone");
-		String address =request.getParameter("address");
-		String nic =request.getParameter("nic");
-		String dob =request.getParameter("dob");
-		String sal =request.getParameter("salary");
-		String hd =request.getParameter("hd");
-		String role =request.getParameter("role");
-		String pass =request.getParameter("pass");
-	%>
+    String id = request.getParameter("cm_id");
+    String fname = request.getParameter("fname");
+    String lname = request.getParameter("lname");
+    String email = request.getParameter("email");
+    String phone = request.getParameter("phone");
+    String address = request.getParameter("address");
+    String nic = request.getParameter("nic");
+    String dob = request.getParameter("dob");
+    String sal = request.getParameter("salary");
+    String hd = request.getParameter("hireDate");
+    String role = request.getParameter("role");
+    String pass = request.getParameter("pass");
+%>
 	
 <div class="container">
     <div class="row align-items-center">
@@ -104,7 +104,7 @@
                     <div class="row mb-3">
                         <div class="col input-group">
                             <i class="bi bi-card-heading form-icon"></i>
-                            <input type="text" name="stf_id" pattern="CM\d{5}" required class="form-control" placeholder="Staff ID (CM00001)" value="<%=cid%>" readonly>
+                            <input type="text" name="stf_id" pattern="CM\d{5}" required class="form-control" placeholder="Staff ID (CM00001)" value="<%= id%>" readonly>
                         </div>
                         <div class="col input-group">
                             <i class="bi bi-calendar-event form-icon"></i>

@@ -271,35 +271,7 @@
 <div class="container mt-4">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <c:forEach var="tc" items="${tcDetails}">
-            <c:set var="tid" value="${tc.id}" />
-            <c:set var="fname" value="${tc.fname}" />
-            <c:set var="lname" value="${tc.lname}" />
-            <c:set var="email" value="${tc.email}" />
-            <c:set var="phone" value="${tc.phone}" />
-            <c:set var="address" value="${tc.address}" />
-            <c:set var="nic" value="${tc.nic}" />
-            <c:set var="salary" value="${tc.salary}" />
-            <c:set var="hd" value="${tc.hireDate}" />
-            <c:set var="ex" value="${tc.experience}" />
-            <c:set var="sp" value="${tc.specialization}" />
-            <c:set var="dsig" value="${tc.designation}" />
-            <c:set var="pass" value="${tc.password}" />
-
-            <c:url value="UpdateTeacher.jsp" var="update">
-                <c:param name="tid" value="${tc.id}" />
-                <c:param name="fname" value="${tc.fname}" />
-                <c:param name="lname" value="${tc.lname}" />
-                <c:param name="email" value="${tc.email}" />
-                <c:param name="phone" value="${tc.phone}" />
-                <c:param name="address" value="${tc.address}" />
-                <c:param name="nic" value="${tc.nic}" />
-                <c:param name="salary" value="${tc.salary}" />
-                <c:param name="hd" value="${tc.hireDate}" />
-                <c:param name="ex" value="${tc.experience}" />
-                <c:param name="sp" value="${tc.specialization}" />
-                <c:param name="dsig" value="${tc.designation}" />
-                <c:param name="pass" value="${tc.password}" />
-            </c:url>
+          
 
             <div class="col">
                 <div class="card h-100 shadow-sm">
@@ -317,14 +289,32 @@
                         <p><strong>Designation:</strong> ${tc.designation}</p>
                         <p><strong>Password:</strong> ${tc.password}</p>
                     </div>
+                    
+
+            <c:url value="UpdateTeacher.jsp" var="tcupdate">
+                <c:param name="id" value="${tc.id}" />
+                <c:param name="fname" value="${tc.fname}" />
+                <c:param name="lname" value="${tc.lname}" />
+                <c:param name="email" value="${tc.email}" />
+                <c:param name="phone" value="${tc.phone}" />
+                <c:param name="address" value="${tc.address}" />
+                <c:param name="nic" value="${tc.nic}" />
+                <c:param name="dob" value="${tc.dob}" />
+                <c:param name="salary" value="${tc.salary}" />
+                <c:param name="hd" value="${tc.hireDate}" />
+                <c:param name="ex" value="${tc.experience}" />
+                <c:param name="sp" value="${tc.specialization}" />
+                <c:param name="dsig" value="${tc.designation}" />
+                <c:param name="pass" value="${tc.password}" />
+            </c:url>
                     <div class="card-actions">
-		                <form action="${update}" method="get" style="display:inline;">
+		                <form action="${tcupdate}" method="get" style="display:inline;">
 		                    <button type="submit" class="custom-button" title="Update">
 		                        <i class="fas fa-edit"></i>
 		                    </button>
 		                </form>
                         <form method="post" action="TeacherInsertServlet" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this Teacher?');">
-                            <input type="hidden" name="tid" value="${tc.id}" />
+                            <input type="hidden" name="id" value="${tc.id}" />
                             <input type="hidden" name="action" value="delete" />
                             <button type="submit" class="custom-button delete" title="Delete">
                         	<i class="fas fa-trash-alt"></i>

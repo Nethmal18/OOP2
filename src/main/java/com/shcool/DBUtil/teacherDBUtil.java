@@ -10,6 +10,7 @@ public class teacherDBUtil {
 	//private static boolean isSuccess =false;
 	private static Connection con = null;
 	//private static Statement stmt = null;
+	private static boolean isSuccess =false;
 	
 	
 	public static List<Teacher> getAllTeachers(){
@@ -102,6 +103,55 @@ public class teacherDBUtil {
 	            throw e;
 	        }
 	    }
+	
+	public static boolean updateTeacher(String stf_id, String stf_hireDate, String stf_fname, String stf_lname, 
+		    String stf_email, String stf_dob, String stf_phone, String stf_address, String stf_nic, 
+		    double stf_salary, String stf_password, int tc_experience, String tc_specialization, String tc_designation) {
+		    
+		    boolean isSuccess = false;
+		    
+		    try {
+		        con = DBConnection.getConnection();
+		        
+		        // Update staff table
+		        String staffUpdate = "UPDATE staff SET stf_hireDate=?, stf_fname=?, stf_lname=?, stf_email=?, " +
+		                            "stf_phone=?, stf_address=?, stf_nic=?, stf_salary=?, stf_password=? WHERE stf_id=?";
+		        PreparedStatement staffStmt = con.prepareStatement(staffUpdate);
+		        staffStmt.setString(1, stf_hireDate);
+		        staffStmt.setString(2, stf_fname);
+		        staffStmt.setString(3, stf_lname);
+		        staffStmt.setString(4, stf_email);
+		        staffStmt.setString(5, stf_phone);
+		        staffStmt.setString(6, stf_address);
+		        staffStmt.setString(7, stf_nic);
+		        staffStmt.setDouble(8, stf_salary);
+		        staffStmt.setString(9, stf_password);
+		        staffStmt.setString(10, stf_id);
+		        
+		        int staffResult = staffStmt.executeUpdate();
+		        
+		        if(staffResult > 0) {
+		            // Update teacher table
+		            String teacherUpdate = "UPDATE Teacher SET tc_experience=?, tc_specialization=?, tc_designation=? WHERE tc_id=?";
+		            PreparedStatement teacherStmt = con.prepareStatement(teacherUpdate);
+		            teacherStmt.setInt(1, tc_experience);
+		            teacherStmt.setString(2, tc_specialization);
+		            teacherStmt.setString(3, tc_designation);
+		            teacherStmt.setString(4, stf_id);
+		            
+		            int success = teacherStmt.executeUpdate();
+		            isSuccess = (success > 0);
+		            
+		        } else {
+		            System.out.println("Error occurred during Staff Update...");
+		        }
+		    } catch(Exception e) {
+		        e.printStackTrace();
+		    }
+		    
+		    return isSuccess;
+		}
+	
 	public static int getTeacherCount() throws Exception {
 		int count = 0;
 		String CountSql = "SELECT COUNT(*) FROM teacher";

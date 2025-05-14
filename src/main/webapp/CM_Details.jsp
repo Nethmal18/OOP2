@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -236,7 +237,7 @@
 		        
 		        
 		        <li class="nav-item" style = "margin-left : 130px">
-		          <a class="nav-link" href="admin.jsp">Home</a>
+		          <a class="nav-link" href="CountServlet">Home</a>
 		        </li>
 		        
 		        <li class="nav-item">
@@ -279,19 +280,6 @@
 <!-- Card Grid Display -->
 <div class="card-grid">
     <c:forEach var="cm" items="${cmDetails}">
-        <c:set var="cid" value="${cm.id}" />
-        <c:set var="fname" value="${cm.fname}" />
-        <c:set var="lname" value="${cm.lname}" />
-        <c:set var="email" value="${cm.email}" />
-        <c:set var="phone" value="${cm.phone}" />
-        <c:set var="address" value="${cm.address}" />
-        <c:set var="nic" value="${cm.nic}" />
-        <c:set var="dob" value="${cm.dob}" />
-        <c:set var="salary" value="${cm.salary}" />
-        <c:set var="hd" value="${cm.hireDate}" />
-        <c:set var="role" value="${cm.cm_role}" />
-        <c:set var="pass" value="${cm.password}" />
-
         <div class="admin-card">
             <h3>${cm.fname} ${cm.lname}</h3>
             <p><strong>CM ID: </strong> ${cm.cm_id}</p>
@@ -304,8 +292,8 @@
             <p><strong>Hire Date:</strong> ${cm.hireDate}</p>
             <p><strong>Role:</strong> ${cm.cm_role}</p>
 
-            <c:url value="UpdateCM.jsp" var="update">
-                <c:param name="cid" value="${cm.id}" />
+            <c:url value="UpdateCM.jsp" var="cmUpdate">
+                <c:param name="cm_id" value="${cm.id}" />
                 <c:param name="fname" value="${cm.fname}" />
                 <c:param name="lname" value="${cm.lname}" />
                 <c:param name="email" value="${cm.email}" />
@@ -314,20 +302,18 @@
                 <c:param name="nic" value="${cm.nic}" />
                 <c:param name="dob" value="${cm.dob}" />
                 <c:param name="salary" value="${cm.salary}" />
-                <c:param name="hd" value="${cm.hireDate}" />
+                <c:param name="hireDate" value="${cm.hireDate}" />
                 <c:param name="role" value="${cm.cm_role}" />
-                <c:param name="pass" value="${cm.password}" />
+                <c:param name="password" value="${cm.password}" />
             </c:url>
 
             <div class="card-actions">
-                <form action="${update}" method="get" style="display:inline;">
-                    <button type="submit" class="custom-button" title="Update">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                </form>
+                <a href="${cmUpdate}" class="custom-button" title="Update">
+                    <i class="fas fa-edit"></i>
+                </a>
 
                 <form method="post" action="DeleteCMServlet" onsubmit="return confirm('Delete this Curriculum Manager?');" style="display:inline;">
-                    <input type="hidden" name="cid" value="${cm.id}" />
+                    <input type="hidden" name="id" value="${cm.id}" />
                     <input type="hidden" name="action" value="delete" />
                     <button type="submit" class="custom-button delete" title="Delete">
                         <i class="fas fa-trash-alt"></i>

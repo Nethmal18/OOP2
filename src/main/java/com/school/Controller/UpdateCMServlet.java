@@ -11,14 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.shcool.DBUtil.cmDBUtil;
 
-
-
-
 @WebServlet("/UpdateCMServlet")
 public class UpdateCMServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Update COme");
 		String stf_id = request.getParameter("stf_id");
 	    String stf_hireDate = request.getParameter("stf_hireDate");
 	    String stf_fname = request.getParameter("stf_fname");

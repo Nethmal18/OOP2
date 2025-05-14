@@ -155,7 +155,7 @@ public class cmDBUtil {
 		try {
 			con = DBConnection.getConnection();
 			st = con.createStatement();
-			
+			System.out.println("DELET");
 			String sql1 = "DELETE FROM cr_manager WHERE cm_id = '"+cm_id+"'";
 			String sql2 = "DELETE FROM staff WHERE stf_id = '"+cm_id+"'";
 			
