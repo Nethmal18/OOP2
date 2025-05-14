@@ -105,12 +105,10 @@ a{
 }
 
 
-.logOutDiv
-{
-	display : inline-block;
-	margin-right: 43px;
-	transition-duration: 0.5s;
-	
+.logOutDiv {
+  display: inline-block;
+  margin-right: 0px;
+  transition-duration: 0.5s;
 }
 
 
@@ -135,17 +133,15 @@ a{
 }
 
 .profile-pic {
-	
-        width: 50px;
-        height: 50px;
-        margin-right : 23px;
+  width: 43px;
+  height: 43px;
+  margin-right: 23px;
 }
 
 .profile-pic img {
             width: 100%;
             height: 100%;
  }
-
 
 /*End of navbar */
 

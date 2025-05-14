@@ -1,29 +1,6 @@
 @charset "ISO-8859-1";
 
-body, html{
-	
-	color : black;
-	background-repeat: no-repeat;
-	background-size:500px 500px;
-	
-}
 
-body::before {
-  content: "";
-  position: absolute;
-  width : 100%;
-  height : 100%;
-  top: 0;
-  left: 0;
-  background-image: url("images/Mailbox-bro.png");
-  background-repeat: no-repeat;
-  background-size: 700px 700px;  /* Fix here */
-  background-position: center;
-  opacity: 0.1;
-  margin-top : 400px;
-}
-
-   
 
 a{
 	text-decoration: none;
@@ -73,6 +50,8 @@ a{
 
 /* for the navBar */
 
+/* for the navBar */
+
 
 .nav-item 
 {
@@ -103,12 +82,10 @@ a{
 }
 
 
-.logOutDiv
-{
-	display : inline-block;
-	margin-right: 43px;
-	transition-duration: 0.5s;
-	
+.logOutDiv {
+  display: inline-block;
+  margin-right: 0px;
+  transition-duration: 0.5s;
 }
 
 
@@ -133,18 +110,15 @@ a{
 }
 
 .profile-pic {
-	
-        width: 50px;
-        height: 50px;
-        margin-right : 23px;
+  width: 43px;
+  height: 43px;
+  margin-right: 23px;
 }
 
 .profile-pic img {
             width: 100%;
             height: 100%;
  }
-
-
 
 
 .offcanvas-header {

@@ -34,7 +34,7 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="ExamManagement.jsp">Exam</a>
+		          <a class="nav-link" href="viewStdInfo.jsp">Students</a>
 		        </li>
 		        
 		        <li class="nav-item" >
@@ -51,7 +51,7 @@
 		      
 		      </div>
 		        
-		     <div  class = "logOutDiv">
+		     <div   onclick = "" class = "logOutDiv">
 		
 					<img class ="profile-pic" src = "images/moneyIcon.png">
 		      
@@ -69,7 +69,6 @@
 		    </div>
 		  </div>
 	</nav> 
-
 
 	<!--  off canvas menu -->
 			<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src = "images/arrow-bar-right.svg" width="50" height="40"></img></button>

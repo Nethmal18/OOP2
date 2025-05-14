@@ -55,6 +55,7 @@ body, html{
  
 }
 /* for the navBar */
+/* for the navBar */
 
 
 .nav-item 
@@ -86,12 +87,10 @@ body, html{
 }
 
 
-.logOutDiv
-{
-	display : inline-block;
-	margin-right: 43px;
-	transition-duration: 0.5s;
-	
+.logOutDiv {
+  display: inline-block;
+  margin-right: 0px;
+  transition-duration: 0.5s;
 }
 
 
@@ -116,24 +115,15 @@ body, html{
 }
 
 .profile-pic {
-	
-        width: 50px;
-        height: 50px;
-        margin-right : 23px;
+  width: 43px;
+  height: 43px;
+  margin-right: 23px;
 }
 
 .profile-pic img {
             width: 100%;
             height: 100%;
  }
-
-
-
-.offcanvas-header {
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-}
 
 h5 {
 	

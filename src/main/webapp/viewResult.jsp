@@ -17,10 +17,10 @@
 </head>
 <body>
 	
-	<!--nav bar -->
+<!--nav bar -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
 		  <div class="container-fluid">
-		        <a class="navbar-brand" href="studentDashboard.jsp">
+		        <a class="navbar-brand" href="StudentDashboardServlet">
      				 <img src="images/LogoResized.png" alt="LOGO" width="136" height="122"> 
      		    </a>
 
@@ -34,7 +34,7 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="viewResult.jsp">Exam</a>
+		          <a class="nav-link" href="viewResult.jsp">Results</a>
 		        </li>
 		        
 		        <li class="nav-item" >
@@ -45,19 +45,25 @@
 		      </ul>
 		
 		    
-		            
+		    <div style = "margin-top : 10px" onclick = "location.href='StudentDashboardServlet'"  class = "logOutDiv">
+		
+					<img class ="profile-pic" src = "images/notifications.png">
 		      
+		      </div>
+		        
+		     <div   onclick = "location.href='paymentPage.jsp'" class = "logOutDiv">
+		
+					<img class ="profile-pic" src = "images/moneyIcon.png">
+		      
+		      </div>
+		      
+		         
 		      <div   onclick = "location.href='home.jsp'"  class = "logOutDiv">
 		
-					<img class ="logOutIcon" src = "images/signOut.png">
+					<img class ="logOutIcon" src = "images/logout.gif">
 		      
 		      </div>
 		      
-		        
-		      <div class = "profile-pic">
-			   	  	
-				<img class ="profile-pic img" src = "images/profilePic.png">
-		      </div>
 		      
 		     
 		    </div>

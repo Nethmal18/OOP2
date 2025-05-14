@@ -13,7 +13,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <!-- AOS Animation Library -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -348,59 +349,141 @@
         height: auto;
         padding: 10px 0;
       }
+      
+      /* for the navBar */
+
+		
+		.nav-item 
+		{
+			margin-right : 50px;
+		}
+		
+		.nav-item a:hover{
+			
+			color : royalblue;
+		}
+		
+		.navbar-brand {
+		
+		  font-size: var(--bs-navbar-brand-font-size);
+		  color: var(--bs-navbar-brand-color);
+		  text-decoration: none;
+		  white-space: nowrap;
+		  top: -23px;
+		  left: -8px;
+		  position:absolute;
+		  height : 50px;
+		  margin-top : 0px;
+		}
+		
+		.navbar 
+		{
+			height : 80px !important;
+		}
+		
+		
+		.logOutDiv {
+		  display: inline-block;
+		  margin-right: 0px;
+		  transition-duration: 0.5s;
+		}
+		
+		
+		.logOutDiv:hover 
+		{
+			scale : 110%;
+			transition-duration: 0.5s;
+		}
+		
+		
+		.pfpDiv 
+		{
+			display : inline-block;
+			margin-right: 60px;
+		}
+		
+		
+		.logOutIcon {
+		  width: 65px;
+		  height: 65px;
+		}
+		
+		.profile-pic {
+		  width: 57px;
+		  height: 56px;
+		  margin-right: 23px;
+		}
+		
+		.profile-pic img {
+		            width: 100%;
+		            height: 100%;
+		 }
+
+
+      
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
-    <div class="container">
-      <a class="navbar-brand" href="index.jsp">
-        <img src="images/logo.png" alt="LOGO" width="110" height="60">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+   <!-- new nav bar -->
+  <!--nav bar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+		  <div class="container-fluid">
+		        <a class="navbar-brand" href="home.jsp">
+     				 <img src="images/LogoResized.png" alt="LOGO" width="100" height="100"> 
+     		    </a>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left-aligned items -->
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  <li class="nav-item" style="margin-left: 50px">
-    <a class="nav-link active" href="#home">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#features">Features</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#feedback">Testimonials</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="Login.jsp">Student</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="Login.jsp">Teacher</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="Login.jsp">Curriculum Manager</a>
-  </li>
-</ul>
-
-		<!-- Right-aligned items -->
-		<ul class="navbar-nav" style="margin-left: auto; display: flex;">
-		  <li class="nav-item">
-		    <a href="Login.jsp" class="nav-link">SignIn</a>
-		  </li>
-		  <li class="nav-item">
-		    <a href="SignUp.jsp" class="nav-link">SignUp</a>
-		  </li>
-		</ul>
-
-        
-      </div>
-    </div>
-  </nav>
-
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        
+		        
+		        <li class="nav-item"  style = "margin-left : 40px">
+		  		  <a class="nav-link" href="#features">Features</a>
+				</li>
+				  
+				<li class="nav-item">
+		    		<a class="nav-link" href="#feedback">Testimonials</a>
+		  		</li>
+		  		
+		  		<li class="nav-item">
+		   			 <a class="nav-link" href="Login.jsp">Student</a>
+		  		</li>
+		  		
+		  		<li class="nav-item">
+		  		  <a class="nav-link" href="Login.jsp">Teacher</a>
+		 	    </li>
+		 	  
+		        <li class="nav-item" >
+		          <a class="nav-link" href="#">FAQ</a>
+		        </li>
+            
+		        
+		      </ul>
+		
+		    
+		        
+		     <div style = "margin-right : 20px;"onclick = "location.href='Login.jsp'" class = "logOutDiv">
+		
+					<img class ="logOutIcon" src = "images/signUp.gif">
+		      
+		      </div>
+		      
+		         
+		      <div  onclick = "location.href='home.jsp'"  class = "logOutDiv">
+		
+					<img class ="logOutIcon" src = "images/logIn.gif">
+		      
+		      </div>
+		      
+		      
+		     
+		    </div>
+		  </div>
+	</nav> 
+  
+  
   <!-- Video Background -->
   <video autoplay muted loop class="video-bg">
     <source src="gift/home.mp4" type="video/mp4">

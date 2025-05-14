@@ -5,8 +5,131 @@
     <meta charset="UTF-8">
     <title>Insert Teacher</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+    <style>
+    
+		.nav-item 
+		{
+			margin-right : 50px;
+		}
+		
+		.nav-item a:hover{
+			
+			color : royalblue;
+		}
+		
+		.navbar-brand {
+		
+		  font-size: var(--bs-navbar-brand-font-size);
+		  color: var(--bs-navbar-brand-color);
+		  text-decoration: none;
+		  white-space: nowrap;
+		  top: -23px;
+		  left: -8px;
+		  position:absolute;
+		  height : 50px;
+		  margin-top : 0px;
+		}
+		
+		.navbar 
+		{
+			height : 80px !important;
+		}
+		
+		
+		.logOutDiv {
+		  display: inline-block;
+		  margin-right: 0px;
+		  transition-duration: 0.5s;
+		}
+		
+		
+		.logOutDiv:hover 
+		{
+			scale : 110%;
+			transition-duration: 0.5s;
+		}
+		
+		
+		.pfpDiv 
+		{
+			display : inline-block;
+			margin-right: 60px;
+		}
+		
+		
+		.logOutIcon 
+		{
+			width: 70px;
+		 	 height: 70px;
+		}
+		
+		.profile-pic {
+		  width: 43px;
+		  height: 43px;
+		  margin-right: 23px;
+		}
+		
+		.profile-pic img {
+		            width: 100%;
+		            height: 100%;
+		 }
+    
+    
+    </style>
 </head>
 <body style="background-color: #f8f9fa;">
+
+
+<!--nav bar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+		  <div class="container-fluid">
+		        <a class="navbar-brand" href="CountServlet">
+     				 <img src="images/LogoResized.png" alt="LOGO" width="136" height="122"> 
+     		    </a>
+
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        
+		        
+		        <li class="nav-item" style = "margin-left : 130px">
+		          <a class="nav-link" href="admin.jsp">Home</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="STservlet">Students</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="TeacherServlet">Teachers</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="AdminServlet">Administration</a>
+		        </li>
+		        
+		        
+            
+		        
+		      </ul>
+		    
+		    <div style = "margin-top : 10px" onclick = "location.href='CountServlet'"  class = "logOutDiv">
+		
+					<img class ="profile-pic" src = "images/notifications.png">
+		      
+		      </div>
+		      
+		      
+		      <div   onclick = "location.href='home.jsp'"  class = "logOutDiv">
+					<img class ="logOutIcon" src = "images/logout.gif">
+		      
+		      </div>
+		      
+	
+		    </div>
+		  </div>
+	</nav> 
 <div class="container mt-5">
     <h2 class="mb-4">Add New Teacher</h2>
     <form action="TeacherInsertServlet" method="post">

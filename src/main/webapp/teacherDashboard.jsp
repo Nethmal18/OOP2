@@ -21,7 +21,32 @@
 	<title>Teacher Dashboard</title>
 	<link rel="icon" type="image/png" href="images/faviconIcon.png">
 	
+	<style>
+	body, html{
 	
+	color : black;
+	background-repeat: no-repeat;
+	background-size:500px 500px;
+	
+	}
+
+	body::before {
+	  content: "";
+	  position: absolute;
+	  width : 100%;
+	  height : 100%;
+	  top: 0;
+	  left: 0;
+	  background-image: url("images/Mailbox-bro.png");
+	  background-repeat: no-repeat;
+	  background-size: 700px 700px;  /* Fix here */
+	  background-position: center;
+	  opacity: 0.1;
+	  margin-top : 400px;
+	}
+
+	</style>
+
 </head>
 <body>
 
@@ -43,7 +68,7 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="ExamManagement.jsp">Exam</a>
+		          <a class="nav-link" href="viewStdInfo.jsp">Students</a>
 		        </li>
 		        
 		        <li class="nav-item" >
@@ -60,7 +85,7 @@
 		      
 		      </div>
 		        
-		     <div  class = "logOutDiv">
+		     <div   onclick = "" class = "logOutDiv">
 		
 					<img class ="profile-pic" src = "images/moneyIcon.png">
 		      
@@ -78,7 +103,6 @@
 		    </div>
 		  </div>
 	</nav> 
-
 
 
 	<!--this is the main DIV-->

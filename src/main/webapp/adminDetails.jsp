@@ -84,36 +84,130 @@
         .custom-button.delete {
             background-color: #e74c3c;
         }
+        
+        /* for the navBar */
+
+
+		.nav-item 
+		{
+			margin-right : 50px;
+		}
+		
+		.nav-item a:hover{
+			
+			color : royalblue;
+		}
+		
+		.navbar-brand {
+		
+		  font-size: var(--bs-navbar-brand-font-size);
+		  color: var(--bs-navbar-brand-color);
+		  text-decoration: none;
+		  white-space: nowrap;
+		  top: -23px;
+		  left: -8px;
+		  position:absolute;
+		  height : 50px;
+		  margin-top : 0px;
+		}
+		
+		.navbar 
+		{
+			height : 80px !important;
+		}
+		
+		
+		.logOutDiv {
+		  display: inline-block;
+		  margin-right: 0px;
+		  transition-duration: 0.5s;
+		}
+		
+		
+		.logOutDiv:hover 
+		{
+			scale : 110%;
+			transition-duration: 0.5s;
+		}
+		
+		
+		.pfpDiv 
+		{
+			display : inline-block;
+			margin-right: 60px;
+		}
+		
+		
+		.logOutIcon 
+		{
+			width: 70px;
+		 	 height: 70px;
+		}
+		
+		.profile-pic {
+		  width: 43px;
+		  height: 43px;
+		  margin-right: 23px;
+		}
+		
+		.profile-pic img {
+		            width: 100%;
+		            height: 100%;
+		 }
+		        
+        
     </style>
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="CountServlet">
-      <img src="images/logo.png" alt="LOGO" width="100" height="90">
-    </a>
+<!--nav bar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+		  <div class="container-fluid">
+		        <a class="navbar-brand" href="CountServlet">
+     				 <img src="images/LogoResized.png" alt="LOGO" width="136" height="122"> 
+     		    </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item ms-4">
-          <a class="nav-link" href="#">Link1</a>
-        </li>
-        <li class="nav-item ms-4">
-          <a class="nav-link" href="#">Link2</a>
-        </li>
-      </ul>
-      <form class="d-flex ms-4" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        
+		        
+		        <li class="nav-item" style = "margin-left : 130px">
+		          <a class="nav-link" href="admin.jsp">Home</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="STservlet">Students</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="TeacherServlet">Teachers</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="AdminServlet">Administration</a>
+		        </li>
+		        
+		        
+            
+		        
+		      </ul>
+		    
+		    <div style = "margin-top : 10px" onclick = "location.href='CountServlet'"  class = "logOutDiv">
+		
+					<img class ="profile-pic" src = "images/notifications.png">
+		      
+		      </div>
+		      
+		      
+		      <div   onclick = "location.href='home.jsp'"  class = "logOutDiv">
+					<img class ="logOutIcon" src = "images/logout.gif">
+		      
+		      </div>
+		      
+	
+		    </div>
+		  </div>
+	</nav> 
 
 <div class="add-new-container">
   <div class="add-new-box" onclick="window.location.href='InsertAdmin.jsp'">

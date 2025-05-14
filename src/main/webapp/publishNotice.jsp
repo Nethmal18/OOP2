@@ -39,7 +39,9 @@
 	
 	<body>
 
-	<!--nav bar -->
+	
+
+<!--nav bar -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
 		  <div class="container-fluid">
 		        <a class="navbar-brand" href="teacherDashboard.jsp">
@@ -56,7 +58,7 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="ExamManagement.jsp">Exam</a>
+		          <a class="nav-link" href="viewStdInfo.jsp">Students</a>
 		        </li>
 		        
 		        <li class="nav-item" >
@@ -73,7 +75,7 @@
 		      
 		      </div>
 		        
-		     <div  class = "logOutDiv">
+		     <div   onclick = "" class = "logOutDiv">
 		
 					<img class ="profile-pic" src = "images/moneyIcon.png">
 		      
@@ -91,6 +93,7 @@
 		    </div>
 		  </div>
 	</nav> 
+	
 		<%--this is the main DIV--%>
 	
 			<div class = "mainDiv">

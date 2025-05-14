@@ -16,40 +16,59 @@
 	</head>
  <body>
  
- 	<!--nav bar -->
+ 
+<!--nav bar -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
 		  <div class="container-fluid">
-		        <a class="navbar-brand" href="">
+		        <a class="navbar-brand" href="StudentDashboardServlet">
      				 <img src="images/LogoResized.png" alt="LOGO" width="136" height="122"> 
      		    </a>
 
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		        
 		        
 		        <li class="nav-item" style = "margin-left : 130px">
-		          <a class="nav-link" href="#">Link1</a>
+		          <a class="nav-link" href="StudentDashboardServlet">Home</a>
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Link2</a>
+		          <a class="nav-link" href="viewResult.jsp">Results</a>
 		        </li>
 		        
 		        <li class="nav-item" >
-		          <a class="nav-link" href="#">Link3</a>
+		          <a class="nav-link" href="#">FAQ</a>
 		        </li>
-		        
-		        
+            
 		        
 		      </ul>
-		      <form class="d-flex" role="search">
-		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-		        <button class="btn btn-outline-success" type="submit">Search</button>
-		      </form>
+		
+		    
+		    <div style = "margin-top : 10px" onclick = "location.href='StudentDashboardServlet'"  class = "logOutDiv">
+		
+					<img class ="profile-pic" src = "images/notifications.png">
+		      
+		      </div>
+		        
+		     <div   onclick = "location.href='paymentPage.jsp'" class = "logOutDiv">
+		
+					<img class ="profile-pic" src = "images/moneyIcon.png">
+		      
+		      </div>
+		      
+		         
+		      <div   onclick = "location.href='home.jsp'"  class = "logOutDiv">
+		
+					<img class ="logOutIcon" src = "images/logout.gif">
+		      
+		      </div>
+		      
+		      
+		     
 		    </div>
 		  </div>
-	</nav> 
- 
+	</nav>
  <h1 style = "margin : 50px 0px 50px 100px">Add Payment Method</h1><br>
  
  		<div class = "cardForm leftDiv">
