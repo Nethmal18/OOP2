@@ -28,7 +28,7 @@
 <%
   String targetPage = (String) request.getAttribute("targetPage");
   if (targetPage == null || targetPage.isEmpty()) {
-      targetPage = "home.jsp"; // Fallback
+      targetPage = "CountServlet"; // Fallback
   }
 %>
 <script>

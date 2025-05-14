@@ -10,7 +10,6 @@ public class teacherDBUtil {
 	//private static boolean isSuccess =false;
 	private static Connection con = null;
 	//private static Statement stmt = null;
-	private static boolean isSuccess =false;
 	
 	
 	public static List<Teacher> getAllTeachers(){
@@ -113,9 +112,12 @@ public class teacherDBUtil {
 		    try {
 		        con = DBConnection.getConnection();
 		        
+		        // Debug print to verify parameters
+		        System.out.println("DB Update Method - DOB Value: " + stf_dob);
+		        
 		        // Update staff table
 		        String staffUpdate = "UPDATE staff SET stf_hireDate=?, stf_fname=?, stf_lname=?, stf_email=?, " +
-		                            "stf_phone=?, stf_address=?, stf_nic=?, stf_salary=?, stf_password=? WHERE stf_id=?";
+		                            "stf_phone=?, stf_address=?, stf_nic=?, stf_dob=?, stf_salary=?, stf_password=? WHERE stf_id=?";
 		        PreparedStatement staffStmt = con.prepareStatement(staffUpdate);
 		        staffStmt.setString(1, stf_hireDate);
 		        staffStmt.setString(2, stf_fname);
@@ -124,9 +126,10 @@ public class teacherDBUtil {
 		        staffStmt.setString(5, stf_phone);
 		        staffStmt.setString(6, stf_address);
 		        staffStmt.setString(7, stf_nic);
-		        staffStmt.setDouble(8, stf_salary);
-		        staffStmt.setString(9, stf_password);
-		        staffStmt.setString(10, stf_id);
+		        staffStmt.setString(8, stf_dob);  // DOB is now included in the update query
+		        staffStmt.setDouble(9, stf_salary);
+		        staffStmt.setString(10, stf_password);
+		        staffStmt.setString(11, stf_id);
 		        
 		        int staffResult = staffStmt.executeUpdate();
 		        

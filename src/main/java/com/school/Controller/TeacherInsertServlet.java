@@ -138,6 +138,10 @@ public class TeacherInsertServlet extends HttpServlet {
 		    String stf_nic = request.getParameter("stf_nic");
 		    String stf_password = request.getParameter("stf_password");
 		    String stf_dob = request.getParameter("stf_dob");
+		    
+		    // Debug print to check parameters
+		    System.out.println("DOB Parameter: " + stf_dob);
+		    
 		    Double stf_salary = Double.parseDouble(request.getParameter("stf_salary"));
 		    int tc_experience = Integer.parseInt(request.getParameter("tc_experience"));
 		    String tc_specialization = request.getParameter("tc_specialization");

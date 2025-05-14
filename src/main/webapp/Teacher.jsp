@@ -308,7 +308,7 @@
                 <c:param name="pass" value="${tc.password}" />
             </c:url>
                     <div class="card-actions">
-		                <form action="${tcupdate}" method="get" style="display:inline;">
+		                <form action="${tcupdate}" method="post" style="display:inline;">
 		                    <button type="submit" class="custom-button" title="Update">
 		                        <i class="fas fa-edit"></i>
 		                    </button>
