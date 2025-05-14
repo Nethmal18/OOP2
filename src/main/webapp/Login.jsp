@@ -11,7 +11,7 @@
     <div class="wrapper">
         <div class="login-card">
             <div class="brand">
-                <img src="image/Avatar.png" alt="Logo">
+                <img src="images/Avatar.png" alt="Logo">
                 <h2>Welcome Back</h2>
                 <p>Please sign in to continue</p>
             </div>
